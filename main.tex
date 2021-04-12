@@ -1,0 +1,65 @@
+\documentclass[aspectratio=169]{beamer}
+
+\usepackage[utf8]{inputenc}
+\usepackage{standalone}
+% THEME
+\usepackage{theme/beamerthemeunimib}
+\usepackage{hyperref}
+\usepackage{amsthm,amsmath}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,shapes,positioning,calc}
+
+\usepackage{algorithm,algorithmic}
+\usepackage{csquotes}
+\usepackage{multirow}
+
+% BIBLIOGRAPHY
+\usepackage[natbib, maxcitenames=10]{biblatex}
+\addbibresource{bibliography.bib}
+  
+\usepackage{booktabs}
+
+\usepackage{multicol}
+\usepackage{blindtext}
+
+\title[]{A very very very long title with more than one line}
+\author[]{All Authors}
+\institute{Data and Computational Biology Lab}
+\date{data}
+
+
+\begin{document}
+
+\maketitle
+
+\begin{frame}
+\frametitle{Title}
+    \blindtext
+\end{frame}
+
+\begin{frame}
+\frametitle{Title}
+\framesubtitle{Subtitle}
+    
+    \begin{block}{Block}
+    blablabla
+    \end{block}
+    
+    \begin{alertblock}{Alert Block}
+    blablabla
+    \end{alertblock}
+    
+    \begin{exampleblock}{Example Block}
+    blablabla
+    \end{exampleblock}
+\end{frame}
+
+\begin{frame}{Bibliography}
+
+\nocite{knuthwebsite}
+
+\printbibliography
+
+\end{frame}
+
+\end{document}

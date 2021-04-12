@@ -1,0 +1,52 @@
+\mode<presentation>
+
+\defbeamertemplate*{title page}{unimib}[1]
+[rounded=true, shadow=false]
+{
+    \begin{columns}
+    \begin{column}{0.2\textwidth}
+    \begin{tikzpicture}[remember picture,overlay]
+        \node [xshift=.5cm, yshift=-3cm] at (current page.west) 
+            {\includegraphics[angle=-90, scale=.2]{graphics/banner_dcb.png}};
+    \end{tikzpicture}
+    \end{column}
+    \begin{column}{0.8\textwidth}
+    
+    \vbox{}
+    \vfill
+    
+    \begin{centering}
+    
+    \usebeamerfont{title}\textbf\inserttitle\par%
+    \ifx\insertsubtitle\@empty%
+    \else%
+    \vskip 0.25em%
+    {\usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}
+    \insertsubtitle\par}%
+    \fi%
+    
+    \vskip1em\par
+    
+    \usebeamerfont{author}\insertauthor
+    
+    \vskip.5em\par
+    
+    \usebeamerfont{institute}\insertinstitute
+    
+    %\usebeamerfont{date}\insertdate
+    
+    % --------------------------------- %
+    % Logos
+    
+    \vskip5em
+    \includegraphics[scale=.3]{graphics/logo_unimib.png}
+    \hfill
+    \includegraphics[scale=.3]{graphics/logo_disco.png}
+    \hfill
+    \includegraphics[scale=.3]{graphics/logo_dcb.png}
+    \end{centering}
+    \end{column}
+    \end{columns}
+}
+
+\mode<all>

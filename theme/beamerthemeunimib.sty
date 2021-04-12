@@ -1,0 +1,63 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%										%%%%%
+%%%%%				~WARNING~				%%%%%
+%%%%%										%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Please note that including the option [usenames,dvipsnames] 
+% is MANDATORY when declaring the document class due to
+% compatibility issues between the packaged tikz and xcolor.
+% So, to use this theme, you MUST write
+% \documentclass[usenames,dvipsnames]{beamer}
+% as first command of your main presentation file.
+
+\mode<presentation>
+
+% comment/uncomment this line to enable/disable debug mode
+%\newcommand*{\DEBUG}{}
+
+% Requirement
+\RequirePackage{xcolor}	% colors
+\RequirePackage{tikz}	% drawing 
+\RequirePackage{soul} 	% text highlighting
+
+\usepackage{theme/beamerinnerthemeunimib}
+
+% in debug mode, show the boxes around the text
+\ifdefined\DEBUG
+\usepackage[absolute,overlay,showboxes]{textpos}
+\else
+\usepackage[absolute,overlay]{textpos}
+\fi
+
+% Settings
+\usepackage{theme/beamerinnerthemeunimib}
+\usepackage{theme/beamerouterthemeunimib}
+\usepackage{theme/beamerfontthemeunimib}
+\usepackage{theme/beamercolorthemeunimib}
+
+% Remove navigation symbols
+\setbeamertemplate{navigation symbols}{}
+% Squared blocks
+\setbeamertemplate{blocks}[rounded] 
+
+% Table of contents (outline) styling
+\setbeamertemplate{section in toc}[ball numbered]
+\setbeamertemplate{subsection in toc}[subsections numbered]
+
+% Bibliography styling
+\setbeamertemplate{bibliography item}[text]
+
+\setbeamertemplate{background}
+{\begin{tikzpicture}[remember picture,overlay]
+        \node [xshift=.5cm, yshift=-3cm] at (current page.west) 
+            {\includegraphics[angle=-90, scale=.2]{graphics/banner_dcb.png}};
+    \end{tikzpicture}}
+
+\setbeamersize{text margin left=2.2cm} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%										%%%%%
+%%%%%			~BONUS COMMANDS~			%%%%%
+%%%%%										%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
